@@ -4,7 +4,7 @@ RUN apt-get update
 RUN apt-get install -y apache2 && apt-get clean
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page279/klean.zip /var/www/html/
 WORKDIR /var/www/html/
-RUN sudo apt install unzip
+RUN sudo apt-get install unzip
 RUN unzip klean.zip
 RUN cp -rvf klean/* .
 RUN rm -rf klean klean.zip
