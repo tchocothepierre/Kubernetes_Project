@@ -1,6 +1,5 @@
 FROM  centos:latest
 LABEL maintainer="tchocothepierre@gmail.com"
-RUN apt-get update && apt-get install -y apt-transport-https
 RUN sudo apt install apache2 
 RUN sudo ufw app list
 RUN sudo ufw allow 'Apache'
