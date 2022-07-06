@@ -1,7 +1,7 @@
 FROM  centos:latest
 LABEL maintainer="tchocothepierre@gmail.com"
 LABEL version="0.1"
-RUN sudo apt update -y
+RUN sudo apt update
 RUN sudo apt install apache2 
 RUN sudo ufw app list
 RUN sudo ufw allow 'Apache'
@@ -17,7 +17,7 @@ EXPOSE 80 22
 # FROM  centos:latest
 # LABEL maintainer="tchocothepierre@gmail.com"
 # LABEL version="0.1"
-# RUN sudo apt update -y
+# RUN sudo apt update
 # RUN sudo apt install apache2 
 # RUN sudo apt install apache2 
 # RUN sudo ufw app list
