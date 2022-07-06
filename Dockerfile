@@ -2,7 +2,6 @@ FROM  ubuntu:latest
 MAINTAINER tchocothepierre@gmail.com
 RUN apt-get update
 RUN apt-get install -y apache2 && apt-get clean
-RUN sudo systemctl enable apache2
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page279/klean.zip /var/www/html/
 WORKDIR /var/www/html/
 RUN sudo apt install unzip
