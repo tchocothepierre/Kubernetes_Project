@@ -3,8 +3,8 @@ LABEL maintainer="tchocothepierre@gmail.com"
 LABEL version="0.1"
 RUN sudo apt update -y
 RUN sudo apt install apache2 
- zip\
- unzip
+RUN sudo ufw app list
+RUN sudo ufw allow 'Apache'
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page279/klean.zip /var/www/html/
 WORKDIR /var/www/html/
 RUN unzip klean.zip
@@ -19,8 +19,9 @@ EXPOSE 80 22
 # LABEL version="0.1"
 # RUN sudo apt update -y
 # RUN sudo apt install apache2 
-#  zip\
-#  unzip
+# RUN sudo apt install apache2 
+# RUN sudo ufw app list
+# RUN sudo ufw allow 'Apache'
 # ADD https://www.free-css.com/assets/files/free-css-templates/download/page277/dryme.zip /var/www/html/
 # WORKDIR /var/www/html/
 # RUN unzip dryme.zip
