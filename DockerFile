@@ -1,5 +1,6 @@
 FROM  centos:latest
-LABEL org.opencontainers.image.authors=" tchocothepierre@gmail.com"
+LABEL maintainer="tchocothepierre@gmail.com"
+LABEL version="0.1"
 RUN yum install -y httpd \
  zip\
  unzip
@@ -13,7 +14,8 @@ EXPOSE 80 22
  
  
 # FROM  centos:latest
-# LABEL org.opencontainers.image.authors=" tchocothepierre@gmail.com"
+# LABEL maintainer="tchocothepierre@gmail.com"
+# LABEL version="0.1"
 # RUN yum install -y httpd \
 #  zip\
 #  unzip
