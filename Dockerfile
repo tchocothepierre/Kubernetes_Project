@@ -1,10 +1,10 @@
 FROM  centos:latest
 LABEL maintainer="tchocothepierre@gmail.com"
-LABEL version="0.1"
-RUN sudo apt update
+RUN apt-get update && apt-get install -y apt-transport-https
 RUN sudo apt install apache2 
 RUN sudo ufw app list
 RUN sudo ufw allow 'Apache'
+RUN sudo systemctl enable apache2
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page279/klean.zip /var/www/html/
 WORKDIR /var/www/html/
 RUN unzip klean.zip
@@ -16,12 +16,12 @@ EXPOSE 80 22
  
 # FROM  centos:latest
 # LABEL maintainer="tchocothepierre@gmail.com"
-# LABEL version="0.1"
-# RUN sudo apt update
+# RUN apt-get update && apt-get install -y apt-transport-https
 # RUN sudo apt install apache2 
 # RUN sudo apt install apache2 
 # RUN sudo ufw app list
 # RUN sudo ufw allow 'Apache'
+# RUN sudo systemctl enable apache2
 # ADD https://www.free-css.com/assets/files/free-css-templates/download/page277/dryme.zip /var/www/html/
 # WORKDIR /var/www/html/
 # RUN unzip dryme.zip
