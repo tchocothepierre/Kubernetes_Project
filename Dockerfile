@@ -3,7 +3,8 @@ RUN apt-get -y update && apt-get -y upgrade
 RUN apt-get -y install openjdk-8-jdk wget
 RUN mkdir /usr/local/tomcat
 RUN apt-get install zip unzip -y
-RUN https://archive.apache.org/dist/tomcat/tomcat-10/v10.0.8/bin/apache-tomcat-10.0.8.tar.gz -O /tmp/tomcat.tar.gz
+RUN apt-get install wget -y
+RUN wget https://archive.apache.org/dist/tomcat/tomcat-10/v10.0.8/bin/apache-tomcat-10.0.8.tar.gz -O /tmp/tomcat.tar.gz
 RUN cd /tmp && tar xvfz tomcat.tar.gz
 RUN cp -Rv /tmp/apache-tomcat-10.0.8/* /usr/local/tomcat/
 EXPOSE 8080
