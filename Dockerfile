@@ -1,7 +1,7 @@
 FROM  ubuntu:latest
 MAINTAINER tchocothepierre@gmail.com
 RUN apt-get update
-RUN apt-get install -y apache2 && apt-get clean
+RUN apt-get install apache2 -y
 RUN apt-get install wget
 RUN wget https://www.free-css.com/assets/files/free-css-templates/download/page279/klean.zip
 RUN apt-get install zip unzip -y
