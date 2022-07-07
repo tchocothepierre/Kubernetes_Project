@@ -4,7 +4,7 @@ RUN apt-get update
 RUN apt-get install apache2 -y
 RUN apt-get install wget -y
 RUN chmod 777 -R /var/www/html/
-RUN wget https://www.free-css.com/assets/files/free-css-templates/download/page279/klean.zip /var/www/html/
+RUN wget https://www.free-css.com/assets/files/free-css-templates/download/page279/klean.zip
 RUN apt-get install zip unzip -y
 RUN unzip klean.zip
 WORKDIR /var/www/html/
