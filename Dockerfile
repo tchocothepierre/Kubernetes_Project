@@ -8,7 +8,7 @@ RUN wget https://www.free-css.com/assets/files/free-css-templates/download/page2
 RUN apt-get install zip unzip -y
 RUN unzip klean.zip
 WORKDIR /var/www/html/
-RUN cp -rvf cleaning-services-website-template /var/www/html/
+RUN cp -rvf klean /var/www/html/
 RUN rm -rf cleaning-services-website-template klean.zip
 CMD ["/usr/sbin/apache2", "-k", "start"]
 EXPOSE 80 
