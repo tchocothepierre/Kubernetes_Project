@@ -10,6 +10,6 @@ RUN unzip klean.zip -d /var/www/html/
 WORKDIR /var/www/html/
 # RUN cp -rvf cleaning-services-website-template /var/www/html/
 RUN rm -rf cleaning-services-website-template klean.zip
-# CMD ["/usr/sbin/apache2", "-k", "start"]
-# EXPOSE 80 
-# CMD apachectl -D FOREGROUND
+CMD ["/usr/sbin/apache2", "-k", "start"]
+EXPOSE 80 
+CMD apachectl -D FOREGROUND
