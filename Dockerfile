@@ -1,4 +1,4 @@
-FROM  ubuntu:latest
+FROM  apache2:latest
 MAINTAINER tchocothepierre@gmail.com
 RUN apt-get update
 RUN apt-get install apache2 -y
