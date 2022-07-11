@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pierre
+spec:
+  replicas: 2
+  selector:         # tells the controller which pods to watch/belong to
+    matchLabels:
+      app: pierre
+  template:
+    metadata:
+      labels:
+        app: pierre
+    spec:
+      containers:
+       - name: pierre
+        image: tchocothepierre/pipeline-demo
+        imagePullPolicy: Always
+        ports:
+
+           - containerPort: 80
