@@ -13,9 +13,8 @@ spec:
         app: pierre
     spec:
       containers:
-        name: pierre
-        image: tchocothepierre/pipeline-demo
-        imagePullPolicy: Always
-        ports:
-
-           - containerPort: 80
+        - name: pierre
+          image: tchocothepierre/pipeline-demo
+          imagePullPolicy: Always
+          port:
+          -containerPort: 80
