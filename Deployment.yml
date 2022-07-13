@@ -20,4 +20,4 @@ spec:
           name: pierre
           ports: 
             ? "-containerPort"
-            : 80
+            : 85
