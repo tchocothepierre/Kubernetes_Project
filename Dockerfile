@@ -1,6 +1,6 @@
 FROM  centos:latest
 LABEL org.opencontainers.image.authors=" tchocothepierre@gmail.com"
-RUN apt install -y apache2 2.4.41-4ubuntu3.12 \
+RUN apt install -y apache2 \
  zip\
  unzip
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page254/photogenic.zip /var/www/html/
