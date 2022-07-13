@@ -1,24 +1,20 @@
---- 
 apiVersion: apps/v1
 kind: Deployment
-metadata: 
+metadata:
   name: pierre
-spec: 
+spec:
   replicas: 2
-  selector: 
-    matchLabels: 
+  selector:
+    matchLabels:
       app: pierre
-  template: 
-    metadata: 
-      labels: 
+  template:
+    metadata:
+      labels:
         app: pierre
-    spec: 
-      containers: 
-        - 
+    spec:
+      containers:
+        - name: pierre
           image: tchocothepierre/pipeline-demo
           imagePullPolicy: Always
-          name: pierre
-          ports: 
-            ? "-containerPort"
-            : 80
-
+          ports:
+            '-containerPort': 80
