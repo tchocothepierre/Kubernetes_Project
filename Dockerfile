@@ -1,6 +1,5 @@
-FROM  centos:latest
-LABEL org.opencontainers.image.authors=" tchocothepierre@gmail.com"
-RUN apt-get -y install apache2-bin 
+FROM httpd:2.4
+COPY ./public-html/ /usr/local/apache2/htdocs/
 RUN apt-get install zip unzip -y
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page254/photogenic.zip /var/www/html/
 WORKDIR /var/www/html/
