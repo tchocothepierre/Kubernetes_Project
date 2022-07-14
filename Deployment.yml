@@ -23,6 +23,9 @@ spec:
               cpu: "500m"
             limits:
               memory: "200Mi"
-              cpu:  "750m"  
+              cpu:  "1000m"  
           ports:
             - containerPort: 80
+      tolerations:
+          - effect: NoSchedule
+            operator: Exists
